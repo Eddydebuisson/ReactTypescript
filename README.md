@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ceci est un projet pour prendre en mains typescripts avec React
 
 ## Available Scripts
 
