@@ -5,7 +5,8 @@ Ceci est un projet pour prendre en mains typescripts avec React
 ## Available Scripts
 
 In the project directory, you can run:
-
+the Json server  
+### `npm run json-server`
 ### `npm start`
 
 Runs the app in the development mode.\
