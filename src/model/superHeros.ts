@@ -1,13 +1,13 @@
 export default class SuperHeros {
-    id: number
+    id?: number
     name :string
     image :string
     civil :string
     age :number
     ville :string
 
-    constructor(id:number, name:string,image:string,civil:string, age:number,ville:string){
-        this.id = id 
+    constructor( name:string="",image:string="",civil:string="", age:number=0,ville:string=""){
+        
         this.name = name
         this.image = image
         this.civil = civil

@@ -6,6 +6,7 @@ import Forms from "../component/form/form";
 import Get from "../component/fetch/get";
 import GetId from "../component/fetch/getId";
 import HeroEdit from "../pages/heroEdit";
+import HeroAjout from "../pages/heroAjout";
 const Router: React.FC = () => {
 const routes: RouteObject[] = [
   {
@@ -34,7 +35,12 @@ const routes: RouteObject[] = [
   {
     path: "/edit/:id",
     element: <HeroEdit/>
+  },
+  {
+    path: "/ajout",
+    element:<HeroAjout/>
   }
+
 ];
 
 return <> {useRoutes(routes)}</>

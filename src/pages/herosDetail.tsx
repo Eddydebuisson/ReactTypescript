@@ -3,7 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import SuperHeros from "../model/superHeros";
 // import heros from "../repo/heros_data";
 import Heros from "../component/card/heros";
-import {FiEdit} from "react-icons/fi"
+import { FiEdit } from "react-icons/fi";
+import HeroService from "../service/heroService";
 
 const HeroDetails: React.FC = () => {
   const { id } = useParams();
@@ -20,16 +21,28 @@ const HeroDetails: React.FC = () => {
   //       }),
   //     [id]
   //   );
+  // useEffect(() => {
+  //   fetch(`http://localhost:3004/superHeros/${id}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setHeroId(data);
+  //     });
+  // }, [id]);
+
   useEffect(() => {
-    fetch(`http://localhost:3004/superHeros/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setHeroId(data);
-      });
+    if(id){
+    HeroService.getHeros(+id).then((data) => setHeroId(data));
+    }
   }, [id]);
+
   return (
-    <>{heroId !== undefined && <Heros key={heroId.id} superheros={heroId} />}
-    <Link to={`/edit/${id}`}><button><FiEdit/></button></Link>
+    <>
+      {heroId !== undefined && <Heros key={heroId.id} superheros={heroId} />}
+      <Link to={`/edit/${id}`}>
+        <button>
+          <FiEdit />
+        </button>
+      </Link>
     </>
   );
 };

@@ -33,6 +33,9 @@ const Nav: React.FC = () => {
             <li>
               <NavLink to="/get">Get</NavLink>
             </li>
+            <li>
+              <NavLink to="/ajout">Ajout</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
